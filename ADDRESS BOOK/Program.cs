@@ -20,6 +20,7 @@ namespace DictionaryDemonstration
 
             while (cont)
             {
+                Console.WriteLine("There are " + Address.Count + " Entries");
                 string[] info = new string[2];
                 type = true;
                 while (type)
@@ -30,6 +31,7 @@ namespace DictionaryDemonstration
                     Console.WriteLine("----------------------------------------------------------------------------------------------------");
                     if (input == "a")
                     {
+                        Console.Clear();
                         type = false;
                         Console.Write("Type your name: ");
                         name = Console.ReadLine();
@@ -42,6 +44,7 @@ namespace DictionaryDemonstration
                     }
                     else if (input == "v")
                     {
+                        Console.Clear();
                         Console.WriteLine("Name" + "\t" + "Number" + "\t" + "Address");
                         type = false;
                         foreach(KeyValuePair<string, string[]> kvp in Address)
@@ -51,6 +54,7 @@ namespace DictionaryDemonstration
                             {
                                 Console.Write(kvp.Value[x] + "\t");
                             }
+                            Console.WriteLine();
 
                         }
 
@@ -60,8 +64,7 @@ namespace DictionaryDemonstration
                         Console.WriteLine("wrong input");
                     }
                     Console.WriteLine();
-                    Console.WriteLine("Press anything to continue");
-                    Console.ReadKey();
+                    
                 }
                 
             }
